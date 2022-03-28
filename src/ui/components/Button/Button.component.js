@@ -25,13 +25,15 @@ export default function Button({
   textColor,
   textSize,
   title,
+  padding,
+  margin,
 }) {
   return (
     <ButtonWrapper
       backgroundColor={bgColor}
       borderRadius={5}
-      padding="10px"
-      margin="30px 70px"
+      padding={padding || '10px'}
+      margin={margin || '20px 70px'}
       underlayColor={activeColor}
       onPress={onPress}>
       <ButtonText color={textColor} fontSize={textSize} fontWeight="bold">

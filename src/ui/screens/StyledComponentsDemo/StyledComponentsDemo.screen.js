@@ -1,13 +1,13 @@
 import {View} from 'react-native';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 
-import {HeaderMedium} from '../../components/Headers/Headers.component';
+import {HeaderLarge} from '../../components/Headers/Headers.component';
 import Button from '../../components/Button/Button.component';
 import {routes} from '../../../config/routes';
-import {useNavigation} from '@react-navigation/native';
 import {color} from '../../../theme/color';
 
-export default function AboutScreen() {
+export default function StyledComponentsDemo() {
   const {HOME} = routes;
   const navigation = useNavigation();
 
@@ -20,11 +20,9 @@ export default function AboutScreen() {
         justifyContent: 'center',
         alignContent: 'center',
       }}>
-      <HeaderMedium color="#000" margin="0 20px">
-        In this boilerpalte you will have navigation structure, react context
-        api, styled-component, and some other configurations that you need to
-        headstart a project
-      </HeaderMedium>
+      <HeaderLarge color="#000" margin="0 20px">
+        Styled Components Demo
+      </HeaderLarge>
       <Button
         onPress={navigateToHome}
         title="Back to Home Page"

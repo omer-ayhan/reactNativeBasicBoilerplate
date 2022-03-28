@@ -1,4 +1,6 @@
 export const routes = {
   HOME: 'home',
-  ABOUT: 'about',
+  API: 'api',
+  GLOBALSTATE: 'globalstate',
+  STYLEDCOMPONENT: 'styledcomponent',
 };
