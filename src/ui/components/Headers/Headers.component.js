@@ -1,11 +1,11 @@
 import {Text} from 'react-native';
 import styled from 'styled-components';
 
-import {spacing} from '../../../theme/spacing';
+import {sizes} from '../../../theme/sizes';
 
 const HeaderLarge = styled(Text)`
   color: ${props => props.color};
-  font-size: ${spacing.large};
+  font-size: ${sizes.large}px;
   font-weight: ${props => props.fontWeight || 'bold'};
   text-align: center;
   margin: ${props => props.margin || '0'};
@@ -13,7 +13,7 @@ const HeaderLarge = styled(Text)`
 
 const HeaderMedium = styled(Text)`
   color: ${props => props.color};
-  font-size: ${spacing.medium};
+  font-size: ${sizes.medium}px;
   font-weight: ${props => props.fontWeight || 'bold'};
   text-align: center;
   margin: ${props => props.margin || '0'};
@@ -21,7 +21,7 @@ const HeaderMedium = styled(Text)`
 
 const HeaderSmall = styled(Text)`
   color: ${props => props.color};
-  font-size: ${spacing.small};
+  font-size: ${sizes.small}px;
   font-weight: ${props => props.fontWeight || 'bold'};
   text-align: center;
   margin: ${props => props.margin || '0'};

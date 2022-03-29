@@ -1,13 +1,15 @@
 import {View} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
 import {HeaderLarge} from '../../components/Headers/Headers.component';
 import Button from '../../components/Button/Button.component';
 import {routes} from '../../../config/routes';
 import {color} from '../../../theme/color';
+import {GlobalContext} from '../../../infrastructure/context/GlobalProvider';
 
 export default function StyledComponentsDemo() {
+  const {state} = useContext(GlobalContext);
   const {HOME} = routes;
   const navigation = useNavigation();
 
@@ -20,7 +22,7 @@ export default function StyledComponentsDemo() {
         justifyContent: 'center',
         alignContent: 'center',
       }}>
-      <HeaderLarge color="#000" margin="0 20px">
+      <HeaderLarge color={state.globalColor} margin="0 20px">
         Styled Components Demo
       </HeaderLarge>
       <Button

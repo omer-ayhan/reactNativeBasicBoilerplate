@@ -1,1 +1,3 @@
-export default {};
+export default {
+  globalColor: '#000',
+};

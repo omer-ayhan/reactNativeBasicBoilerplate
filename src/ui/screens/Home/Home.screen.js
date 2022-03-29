@@ -1,8 +1,9 @@
 import {useNavigation} from '@react-navigation/native';
-import React from 'react';
+import React, {useContext} from 'react';
 import {View} from 'react-native';
 
 import {routes} from '../../../config/routes';
+import {GlobalContext} from '../../../infrastructure/context/GlobalProvider';
 import {color} from '../../../theme/color';
 import Button from '../../components/Button/Button.component';
 import {
@@ -11,6 +12,7 @@ import {
 } from '../../components/Headers/Headers.component';
 
 export default function HomeScreen() {
+  const {state} = useContext(GlobalContext);
   const {API, GLOBALSTATE, STYLEDCOMPONENT} = routes;
   const navigation = useNavigation();
 
@@ -23,10 +25,10 @@ export default function HomeScreen() {
         justifyContent: 'flex-start',
         alignContent: 'flex-start',
       }}>
-      <HeaderLarge color="#000">
+      <HeaderLarge color={state.globalColor}>
         Welcome to React Native Starter Boilerplate
       </HeaderLarge>
-      <HeaderMedium color="#000" margin="20px 20px 0 20px">
+      <HeaderMedium color={state.globalColor} margin="20px 20px 0 20px">
         In this boilerpalte you will have navigation structure, api structure,
         react context api, styled-component, and some other configurations that
         you need to headstart a project
